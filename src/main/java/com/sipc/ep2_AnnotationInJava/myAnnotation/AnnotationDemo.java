@@ -1,6 +1,6 @@
 package com.sipc.ep2_AnnotationInJava.myAnnotation;
 
-@MyAnnotation
+@MyAnnotation(value = "猫猫")
 public class AnnotationDemo {
     public static void main(String[] args) {
         MyAnnotation myAnnotation = AnnotationDemo.class.getDeclaredAnnotation(MyAnnotation.class);

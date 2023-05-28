@@ -11,7 +11,7 @@ public class AnimalHandler implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         System.out.println("Before invoke "  + method.getName());
-        method.invoke(bean, args);
+        method.invoke(bean, args); //调用的方法
         System.out.println("After invoke " + method.getName());
         return null;
     }

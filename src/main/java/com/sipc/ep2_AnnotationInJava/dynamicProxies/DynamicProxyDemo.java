@@ -7,5 +7,8 @@ public class DynamicProxyDemo {
         AnimalHandler animalHandler = new AnimalHandler(new Cat());
         Animal cat = (Animal) Proxy.newProxyInstance(Animal.class.getClassLoader(),new Class[]{Animal.class},animalHandler);
         cat.eat();
+        AnimalHandler doghandler = new AnimalHandler(new Dog());
+        Animal dog = (Animal) Proxy.newProxyInstance(Animal.class.getClassLoader(),new Class[]{Animal.class},doghandler);
+        dog.eat();
     }
 }
